@@ -1,0 +1,25 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+            alert("{{messages[-1]}}");
+        </script>
+    {%endif%}
+{% endwith %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/caustyle2.css">
+</head>
+<body>
+    <img class="cau" src="../static/img/precautions2_en.png" width="50%">
+    <a href="http://192.168.0.10:9999/test">
+        <!--<img class="test" src="../static/img/test2.png" style="display: block; margin: 0 auto; height:222px; width:350px;">-->
+        <img class="test" src="../static/img/test.png">
+    </a>
+</body>
+</html>

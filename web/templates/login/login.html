@@ -1,0 +1,61 @@
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">                  
+        <link rel="stylesheet" href="../../static/css/login.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>#my-input {visibility: hidden;}</style>
+    </head>
+    <body>
+        <div>
+           <div class="panel shadow1">
+                <form class="login-form">
+                    <div class="panel-switch animated fadeIn">
+                        <button type="button" id="sign_up" class="active-button">Sign Up</button>
+                        <button type="button" id="log_in" class="" disabled>Login</button>
+                    </div>
+                    <h1 class="show1" id="title-login">BE HONEST !</h1>
+                    <h1 class="show1 hidden" id="title-signup">ARE YOU HONEST?</h1>
+                    <fieldset id="login-fieldset">
+                        <input class="show2" name="email" type="textbox"  required   placeholder="E-mail" value="" >
+                        <input class="show3" name="password" type="password" required placeholder="Password" value="">
+                    </fieldset>
+                    <fieldset id="signup-fieldset" class="hidden">
+                        <input class="show2" name="email" type="textbox"  required   placeholder="E-mail" value="" >
+                        <input class="show4" name="username" type="textbox"  required   placeholder="Name" value="" >
+                        <input class="show3" name="password" type="password" placeholder="Password"  required  value="">
+                        <input class="show5" name="birth date" type="textbox"  required   placeholder="Birth (yyMMdd)" value="" >
+                        <input class="show6" name="Phone number" type="textbox"  required   placeholder="Phone Number" value="" >
+                        <ul class="tabs">
+                            <li class="tab">
+                              <input type="radio" id="tab-1" name="tab-group-1" checked>
+                              <label for="tab-1">Supervior</label>
+                              <div class="content">
+                                <p><input class="show7" name="slackID" type="textbox"  required   placeholder="slack ID" value="" ></p>
+                              </div>
+                            </li>
+                            <li class="tab">
+                              <input type="radio" id="tab-2" name="tab-group-1">
+                              <label for="tab-2">Examinee</label>
+                              <div class="content">
+                                <button id="my-button" class="favorite styled"  onclick="onClickUpload();">Upload Examination Card</button>
+                                <input id="my-input" type="file" />
+                              </div>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <input type="submit" id="login-form-submit" class="login_form button " value="Login">
+                    <input type="submit" id="signup-form-submit" class="login_form button hidden" value="Sign Up">
+                </form>
+            </div>
+        </div>
+        <script src="../../static/js/login.js"></script>
+        <script>
+            function onClickUpload() {
+                let myInput = document.getElementById("my-input");
+                myInput.click();
+            }
+        </script>
+    </body>
+</html>

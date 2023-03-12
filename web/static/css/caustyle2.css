@@ -1,0 +1,21 @@
+img.cau{
+    position: absolute;
+  left: 500px;
+  top: 100px;
+}
+
+img.test{
+    position: absolute;
+  left: 810px;
+  top: 520px;
+  animation: up-down 1.0s infinite ease-in-out alternate;
+}
+
+@keyframes up-down{
+    from{
+      transform: translatey(0px);
+    }
+    to{
+      transform: translatey(-5px);
+    }
+  }
